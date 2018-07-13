@@ -71,7 +71,24 @@
 		</style>
 
 		<script>
+			//grab my second, minute, and hour hands from the document
+			const secondHand = document.querySelector('.second-hand');
+			const minHand = document.querySelector('.min-hand');
+			const hourHand = document.querySelector(`.hour-hand`);
 
+			//grab the current time and move the hands accordingly
+			function setDate() {
+				//declare a new instance of the date class
+				const now = new Date();
+
+				//set my seconds variable
+				const seconds = now.getSeconds();
+
+				console.log(seconds);
+			}
+
+			//set my setDate function to run once a second
+			setInterval(setDate, 1000);
 		</script>
 
 	</body>
