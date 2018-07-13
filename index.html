@@ -86,7 +86,9 @@
 				const minutes = now.getMinutes();
 				const hours = now.getHours();
 
-				console.log(seconds, minutes, hours);
+				secondHand.style.transform = `rotate(100deg}`;
+				minHand.style.transform = `rotate(200deg)`;
+				hourHand.style.transform = `rotate(300deg`;
 			}
 
 			//set my setDate function to run once a second
