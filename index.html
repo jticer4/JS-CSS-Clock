@@ -88,8 +88,8 @@
 
 				//set the variables that will determine the position of the hands
 				const secondsDegrees = ((seconds / 60) * 360) + 90;
-				const minutesDegrees = ((minutes / 60) * 360);
-				const hoursDegrees = ((hours / 60) * 360);
+				const minutesDegrees = ((minutes / 60) * 360) + 90;
+				const hoursDegrees = ((hours / 60) * 360) + 90;
 
 				//move the hands across the clock face
 				secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
