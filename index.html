@@ -86,9 +86,16 @@
 				const minutes = now.getMinutes();
 				const hours = now.getHours();
 
-				secondHand.style.transform = `rotate(100deg}`;
-				minHand.style.transform = `rotate(200deg)`;
-				hourHand.style.transform = `rotate(300deg`;
+				//set the variables that will determine the position of the hands
+				const secondsDegrees = ((seconds / 60) * 360) + 90;
+				const minutesDegrees = ((minutes / 60) * 360);
+				const hoursDegrees = ((hours / 60) * 360);
+
+				//move the hands across the clock face
+				secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
+				minHand.style.transform = `rotate(${minutesDegrees}deg)`;
+				hourHand.style.transform = `rotate(${hoursDegrees}deg)`;
+				console.log(seconds, minutes, hours);
 			}
 
 			//set my setDate function to run once a second
